@@ -20,11 +20,7 @@ const Sidebar = ({setShow, show}) => {
 
     const navigate = useNavigate();
 
-    const handleClick = async () => {
-        localStorage.removeItem('EM-app-user');
-        setIsLoggedin(false)
-        navigate('/login')
-    }
+    
 
     const [collapsed, setCollapsed] = useState(false);
     // added styles 
@@ -51,6 +47,12 @@ const Sidebar = ({setShow, show}) => {
             setShow(true)
         }
     };
+
+    const handleLogOut = async () => {
+        localStorage.removeItem('MHB-WEB-DASH');
+        setIsLoggedin(false)
+        navigate('/login')
+    }
   return (
       <ProSidebar style={styles.sideBarHeight} collapsed={collapsed}>
           <SidebarHeader>
@@ -63,7 +65,7 @@ const Sidebar = ({setShow, show}) => {
                   Add Image
                   <Link to='/dashboard' />
               </MenuItem>
-              <MenuItem icon={<AiOutlineLogout />} onClickCapture={handleClick}>
+              <MenuItem icon={<AiOutlineLogout />} onClickCapture={handleLogOut}>
                   Logout
               </MenuItem>
           </Menu>
