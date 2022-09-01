@@ -71,9 +71,7 @@ const AddImage = () => {
         if (data.status === false) {
             toast.error(data.msg, toastOptions)
         }
-        else{
-            window.location.reload(false);
-        }
+        
     }
     
 
