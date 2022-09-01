@@ -51,7 +51,7 @@ const Sidebar = ({setShow, show}) => {
     const handleLogOut = async () => {
         localStorage.removeItem('MHB-WEB-DASH');
         setIsLoggedin(false)
-        navigate('/login')
+        navigate('/')
     }
   return (
       <ProSidebar style={styles.sideBarHeight} collapsed={collapsed}>
