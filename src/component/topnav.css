@@ -1,0 +1,19 @@
+.topnav{
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
+    width: 100%;
+}
+
+.topnav__right{
+    display: flex;
+    align-items: center;
+    right: 60px;
+    position: absolute
+}
+
+.topnav__right-item ~ .topnav__right-item {
+    margin-left: 30px;
+}
